@@ -1,6 +1,5 @@
 package com.example.sunsh.accball
 
-import android.app.Activity
 import android.content.Context
 import android.content.pm.ActivityInfo
 import android.graphics.Color
@@ -95,11 +94,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener, SurfaceHolder.Cal
         sensorManager.unregisterListener(this)
     }
 
-    private fun drawCanvas(){
+    private fun drawCanvas() {
         val canvas = surfaceView.holder.lockCanvas()
         canvas.drawColor(Color.YELLOW)
-        canvas.drawCircle(ballX,ballY,radius, Paint().apply {
-            color=Color.MAGENTA
+        canvas.drawCircle(ballX, ballY, radius, Paint().apply {
+            color = Color.MAGENTA
         })
         surfaceView.holder.unlockCanvasAndPost(canvas)
     }
